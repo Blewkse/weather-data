@@ -15,3 +15,23 @@ exports.getAllData = async () => {
       });
   });
 };
+
+exports.getFranceData = async () => {
+  return new Promise((resolve, reject) => {
+    data
+      .find({
+        "position.coordinates": {
+          $geoWithin: { $centerSphere: [[46.625, 2.51], 550 / 3963.2] },
+        },
+      })
+      .then((result) => {
+        console.log("requete effectue");
+        console.log(result);
+        resolve(result);
+      })
+      .catch((err) => {
+        console.log(err);
+        reject(err);
+      });
+  });
+};
