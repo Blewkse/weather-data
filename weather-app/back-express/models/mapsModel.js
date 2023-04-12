@@ -126,4 +126,4 @@ const dataSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("data", dataSchema);
+module.exports = mongoose.model("data", dataSchema, "weather");
