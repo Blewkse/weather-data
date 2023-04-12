@@ -31,6 +31,6 @@ export class FrComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initMap();
-    this.weatherService.getAllData();
+    this.weatherService.getFranceData();
   }
 }
