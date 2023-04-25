@@ -1,10 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const mapsController = require("../controllers/mapsController");
-const franceRouting = require("./franceRouting")
 
-
-router.route("/maps/getAll").get(mapsController.getAllData);
-router.use("/maps/france", franceRouting);
+router.route("/all").get(mapsController.getFranceData);
+router.route("/temp").get(mapsController.getFranceData);
 
 module.exports = router;

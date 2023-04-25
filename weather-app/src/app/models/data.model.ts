@@ -58,3 +58,19 @@ export interface weatherData {
     estimatedWaterDepth: number;
   };
 }
+
+export interface jsonData{
+  success: boolean;
+  data: Array<weatherData>;
+}
+export interface jsonPointData{
+  success: boolean;
+  data: Array<pointData>;
+}
+
+export interface pointData{
+  position: {
+    coordinates : Array <number>;
+  }
+  _id: string;
+}

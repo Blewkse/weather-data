@@ -4,7 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose").default;
 
 mongoose
-  .connect("mongodb://localhost:27017/weatherdata", {
+  .connect("mongodb://127.0.0.1:27017/weatherdata", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
