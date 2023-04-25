@@ -1,0 +1,11 @@
+p {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}

@@ -9,4 +9,14 @@ module.exports = {
     const result = await mapsService.getFranceData();
     res.status(200).json({ success: "true", data: result });
   },
+  getFranceTempData: async (req, res) => {
+    const result = await mapsService.getFranceTempData();
+    console.log(result);
+    res.status(200).json({ success: "true", data: result });
+  },
+  getFrancePrecData: async (req, res) => {
+    const result = await mapsService.getFrancePrecData();
+    console.log(result);
+    res.status(200).json({ success: "true", data: result });
+  },
 };

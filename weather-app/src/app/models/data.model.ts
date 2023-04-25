@@ -59,18 +59,49 @@ export interface weatherData {
   };
 }
 
-export interface jsonData{
+export interface jsonData {
   success: boolean;
   data: Array<weatherData>;
 }
-export interface jsonPointData{
+
+export interface jsonPointData {
   success: boolean;
   data: Array<pointData>;
 }
 
-export interface pointData{
+export interface jsonPointTempData extends jsonPointData {
+  success: boolean;
+  data: Array<pointTempData>;
+}
+
+export interface jsonPointPrecData extends jsonPointData {
+  success: boolean;
+  data: Array<pointPrecData>;
+}
+
+export interface pointData {
   position: {
-    coordinates : Array <number>;
-  }
+    coordinates: Array<number>;
+  };
+  _id: string;
+}
+
+export interface pointTempData extends pointData {
+  position: {
+    coordinates: Array<number>;
+  };
+  airTemperature: {
+    value: number;
+  };
+  _id: string;
+}
+
+export interface pointPrecData extends pointData {
+  position: {
+    coordinates: Array<number>;
+  };
+  precipitationEstimatedObservation: {
+    estimatedWaterDepth: number;
+  };
   _id: string;
 }

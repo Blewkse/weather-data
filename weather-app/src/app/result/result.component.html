@@ -1,0 +1,9 @@
+<div class="content">
+  <div *ngFor="let object of tab.data; let i = index" class="object">
+    <p>Point {{i}}: </p>
+    <p>latitude: {{object.position.coordinates[0]}}</p>
+    <p>longitude: {{object.position.coordinates[1]}}</p>
+  </div>
+</div>
+
+
